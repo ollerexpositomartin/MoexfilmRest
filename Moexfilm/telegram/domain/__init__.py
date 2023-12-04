@@ -1,0 +1,3 @@
+from Moexfilm.telegram.domain.message_header import MessageHeader
+from Moexfilm.telegram.domain.message_movie_header import MessageMovieHeader
+from Moexfilm.telegram.domain.message_tvshow_header import MessageTvShowHeader

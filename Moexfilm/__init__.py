@@ -1,0 +1,2 @@
+from Moexfilm import core
+
