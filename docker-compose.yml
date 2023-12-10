@@ -4,7 +4,7 @@ services:
   moexfilm:
     build: .
     restart: unless-stopped
-    container_name: fsb
+    container_name: moexfilm
     environment:
       # required
       - API_ID=8419357
