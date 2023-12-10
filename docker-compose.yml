@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  moexfilm:
+    build: .
+    restart: unless-stopped
+    container_name: fsb
+    environment:
+      # required
+      - API_ID=8419357
+      - API_HASH=70dff6e59603cd424737a2e18b170653
+      - TMDB_API_KEY=104b32ed630de29cae7b24bb9b997817
+      - BOT_TOKEN=5773156082:AAG5NrSGExXJ0vOCQi6ElJGnN8KjQvr_U14
+      - BIN_CHANNEL=-971868621
+      - DB_NAME=postgres
+      - DB_HOST=db.veplbweymcfyesluztaz.supabase.co
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=moexgram-13
+    ports:
+      - 127.0.0.1:8080:8080
+    volumes:
+      - $HOME/Moexfilm:/app/.env

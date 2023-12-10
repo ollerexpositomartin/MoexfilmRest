@@ -1,16 +1,15 @@
-from pyrogram.types import Message
 import re
-from Moexfilm.telegram.domain.message_header import MessageHeader
+from Moexfilm.telegram.domain import MessageHeader
 
-EPISODE_REGEX = "^[A-Za-z ]+(s| )\\d+(e|x)\\d+$"
+SEASON_EPISODE_REGEX = "s?(\\d+)[ex](\\d+)"
+
+
 class MessageTvShowHeader(MessageHeader):
     season: int
     episode: int
 
-    def __init__(self,message: Message):
-        self.title = self._get_title(message.text)
-
-    def _get_title(self,text:str) -> str :
-        if bool(re.search(EPISODE_REGEX, text)):
-            print("")
-        return ""
+    def __init__(self, text: str):
+        super().__init__(text)
+        season_episode_match = re.search(SEASON_EPISODE_REGEX, text)
+        self.season = season_episode_match[1]
+        self.episode = season_episode_match[2]
