@@ -5,8 +5,7 @@ from fastapi import FastAPI
 from Moexfilm.telegram import Bot
 from Moexfilm.context import application_context
 import uvicorn
-
-from Moexfilm.telegram.application.download import download_router
+from Moexfilm.telegram.interfaces.download import download_router
 
 app = FastAPI()
 app.include_router(download_router)

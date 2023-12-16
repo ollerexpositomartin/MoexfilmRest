@@ -1,1 +1,0 @@
-from Moexfilm.telegram.application.download.download_controller import download_router

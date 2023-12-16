@@ -1,5 +1,4 @@
 import logging
-
 import psycopg2
 from Moexfilm import application_context
 from Moexfilm.core.media.domain.repositories import MoexfilmConnector

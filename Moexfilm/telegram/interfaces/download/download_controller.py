@@ -1,14 +1,11 @@
 import logging
 import math
 import mimetypes
-
 from fastapi import APIRouter, Request
 from fastapi.openapi.models import Response
-
 from fastapi.responses import StreamingResponse
-
 from Moexfilm.telegram import Bot
-from Moexfilm.telegram.application.download import utils
+from Moexfilm.telegram.interfaces.download import utils
 
 download_router = APIRouter()
 

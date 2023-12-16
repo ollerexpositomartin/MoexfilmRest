@@ -49,10 +49,8 @@ class MediaRepositoryImpl(MediaRepository):
     def _get_all_media(self):
         pass
 
+    def _search_media(self, title: str):
+        raise Exception("Not implemented")
 
-def _search_media(self, title: str):
-    pass
-
-
-def _delete_media(self, id: str):
-    pass
+    def _delete_media(self, id: str):
+        raise Exception("Not implemented")
